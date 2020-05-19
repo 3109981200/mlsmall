@@ -1,18 +1,27 @@
 <template>
   <div id="app">
-    .000
+    <router-view/>
+    <tabBarIndex/>
   </div>
 </template>
 
 <script>
-
+import tabBarIndex from 'components/content/tabbarIndex/tabBarIndex'
 export default {
   name: 'App',
   components: {
+    tabBarIndex
+  },
+  data () {
+    return {
+    }
+  },
+  methods: {
   }
 }
 </script>
 
-<style>
+<style scoped lang="stylus">
 @import "assets/css/base.css";
+
 </style>
