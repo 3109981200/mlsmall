@@ -1,16 +1,18 @@
 <template>
   <div id="app">
-    <router-view/>
     <tabBarIndex/>
+    <router-view/>
   </div>
 </template>
 
 <script>
-import tabBarIndex from 'components/content/tabbarIndex/tabBarIndex'
+import tabBarIndex from 'components/content/tabbarindex/TabBarIndex'
+
 export default {
   name: 'App',
   components: {
     tabBarIndex
+
   },
   data () {
     return {

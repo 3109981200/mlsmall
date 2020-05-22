@@ -4,6 +4,12 @@ import VueRouter from 'vue-router'
 // 注册组件
 Vue.use(VueRouter)
 
+// route懒加载
+const Home = () => import('views/home/Home')
+const Category = () => import('views/category/Category')
+const Cart = () => import('views/cart/ShopCart')
+const Profile = () => import('views/profile/Profile')
+
 // 创建路有对象
 const routes = [
   {
@@ -12,28 +18,28 @@ const routes = [
   },
   {
     path: '/home',
-    component: () => import('views/home/Home'),
+    component: Home,
     meta: {
       title: '首页'
     }
   },
   {
     path: '/category',
-    component: () => import('views/category/Category'),
+    component: Category,
     meta: {
       title: '分类'
     }
   },
   {
     path: '/cart',
-    component: () => import('views/cart/ShopCart'),
+    component: Cart,
     meta: {
       title: '购物车'
     }
   },
   {
     path: '/profile',
-    component: () => import('views/profile/Profile'),
+    component: Profile,
     meta: {
       title: '我的'
     }

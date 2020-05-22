@@ -1,5 +1,9 @@
 # mlsmall
 
+## 项目中使用到的前端技术
+```
+vue-cli3、vue-router、axios、element-ui、vue-awesome-swiper
+```
 ## Project setup
 ```
 npm install
