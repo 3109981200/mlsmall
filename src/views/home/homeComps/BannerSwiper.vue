@@ -2,7 +2,7 @@
   <div class="banner">
     <swiper ref="bannerSwiper" :options="swiperOptions">
       <swiperSlide v-for="(item,index) in bannerImg" :key="index">
-        <a :href="item.link"><img :src="item.image" :alt="item.title"></a>
+        <a :href="item.link"><img :src="item.image" :alt="item.title" @load="imgLoad"></a>
       </swiperSlide>
       <div class="swiper-pagination" slot="pagination"></div>
     </swiper>
@@ -24,7 +24,8 @@ export default {
           stopOnLastSlide: false,
           disableOnInteraction: false
         }
-      }
+      },
+      isLoad: false
     }
   },
   props: {
@@ -42,8 +43,16 @@ export default {
     }
   },
   mounted () {
-    console.log('Current Swiper instance object', this.swiper)
+    // console.log('Current Swiper instance object', this.swiper)
     this.swiper.slideTo(3, 1000, false)
+  },
+  methods: {
+    imgLoad () {
+      if (!this.isLoad) { // 通过isLoad 设置只监听一次
+        this.$emit('swiperImgLoad')
+        this.isLoad = true
+      }
+    }
   }
 }
 </script>

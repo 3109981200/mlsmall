@@ -22,4 +22,5 @@ export default {
   right 0
   box-shadow 0 -1px 1px rgba(50,50,50,.1);
   font-size 14px
+  z-index 10
 </style>

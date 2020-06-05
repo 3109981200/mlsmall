@@ -1,15 +1,15 @@
 <template>
-  <Recommend>
-    <RecommendItem v-for="(item,index) in recommendData" :key="index">
-      <div slot="rec-img"><img :src="item.image" alt=""></div>
-      <div slot="rec-text">{{item.title}}</div>
-    </RecommendItem>
-  </Recommend>
+  <div class="recommend">
+    <div class="recommend-item" v-for="(item,index) in recommendData" :key="index">
+      <a :href="item.link">
+        <div class="rec-img"><img :src="item.image" alt=""></div>
+        <div class="text">{{item.title}}</div>
+      </a>
+    </div>
+  </div>
 </template>
 
 <script>
-import Recommend from 'components/common/recommend/Recommend'
-import RecommendItem from 'components/common/recommend/RecommendItem'
 export default {
   name: 'BannerRecommend',
   props: {
@@ -21,20 +21,24 @@ export default {
     return {
     }
   },
-  components: {
-    Recommend,
-    RecommendItem
-  },
   created () {
-    console.log(this.recommendData)
+    // console.log(this.recommendData)
   }
 }
 </script>
 
 <style scoped lang="stylus">
-.recommend
-  display flex
+  .recommend
+    display flex
+    padding-bottom 20px
   .recommend-item
-    flex 1
+    flex 0 0 20%
     text-align center
+    padding 8px 0
+  .rec-img
+    img
+      width 50px
+      margin-bottom 5px
+  .text
+    font-size 12px
 </style>

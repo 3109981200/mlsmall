@@ -2,7 +2,7 @@
 import axios from 'axios'
 import { Message, Loading } from 'element-ui' // 使用element-ui库处理loading和message
 
-const ConfigBaseURL = 'http://localhost:8080/' // 配置默认路径
+const ConfigBaseURL = '/' // 配置默认路径
 let loadingInstance = null // 设置loading
 
 // 使用create方法创建axios实例
