@@ -9,7 +9,7 @@ const Home = () => import('views/home/Home')
 const Category = () => import('views/category/Category')
 const Cart = () => import('views/cart/ShopCart')
 const Profile = () => import('views/profile/Profile')
-
+const GoodsDetails = () => import('views/goodsDetails/GoodsDetails')
 // 创建路有对象
 const routes = [
   {
@@ -42,6 +42,13 @@ const routes = [
     component: Profile,
     meta: {
       title: '我的'
+    }
+  },
+  {
+    path: '/goodsDetails',
+    component: GoodsDetails,
+    meta: {
+      title: '商品详情页'
     }
   }
 ]

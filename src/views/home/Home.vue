@@ -81,7 +81,13 @@ export default {
     })
     // 监听图片点击
     this.$bus.$on('goodsItemClick', (id) => {
-      console.log(id)
+      //  console.log(id)
+      this.$router.push({
+        path: '/goodsDetails',
+        query: {
+          id: id
+        }
+      })
     })
   },
   activated () {
