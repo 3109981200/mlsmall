@@ -14,7 +14,11 @@ export default {
       Type: String,
       default: function () {}
     },
-    activeColor: String
+    activeColor: String,
+    isActive1: {
+      Type: Boolean,
+      default: false
+    }
   },
   data () {
     return {
@@ -22,7 +26,7 @@ export default {
   },
   computed: {
     isActive () {
-      return this.$route.path.indexOf(this.path) !== -1
+      return this.$route.path.indexOf(this.path) !== -1 || this.isActive1
     },
     isActiveColor () {
       return this.isActive ? { color: this.activeColor } : {}

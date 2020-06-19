@@ -9,7 +9,10 @@ const Home = () => import('views/home/Home')
 const Category = () => import('views/category/Category')
 const Cart = () => import('views/cart/ShopCart')
 const Profile = () => import('views/profile/Profile')
-const GoodsDetails = () => import('views/goodsDetails/GoodsDetails')
+const Details = () => import('views/details/Details')
+const Shop = () => import('views/shop/Shop')
+const Customer = () => import('views/customer/Customer')
+const Collect = () => import('views/collect/Collect')
 // 创建路有对象
 const routes = [
   {
@@ -45,10 +48,31 @@ const routes = [
     }
   },
   {
-    path: '/goodsDetails',
-    component: GoodsDetails,
+    path: '/details',
+    component: Details,
     meta: {
       title: '商品详情页'
+    }
+  },
+  {
+    path: '/shop',
+    component: Shop,
+    meta: {
+      title: '商铺页'
+    }
+  },
+  {
+    path: '/customer',
+    component: Customer,
+    meta: {
+      title: '客服页'
+    }
+  },
+  {
+    path: '/collect',
+    component: Collect,
+    meta: {
+      title: '收藏页'
     }
   }
 ]

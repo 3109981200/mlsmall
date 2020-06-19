@@ -26,6 +26,7 @@ export default {
   right 0*/
   .left, .right
     width 72px
+    text-align center
   .center
     flex 1
     text-align center

@@ -1,8 +1,9 @@
+<!--详情页头部轮播图组件-->
 <template>
   <div class="banner">
     <swiper ref="bannerSwiper" :options="swiperOptions">
       <swiperSlide v-for="(item,index) in bannerImg" :key="index">
-        <a :href="item.link"><img :src="item.image" :alt="item.title" @load="imgLoad"></a>
+        <a :href="item.link"><img :src="item"></a>
       </swiperSlide>
       <div class="swiper-pagination" slot="pagination"></div>
     </swiper>
@@ -12,7 +13,7 @@
 <script>
 import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
 export default {
-  name: 'BannerSwiper',
+  name: 'DetailsSwiper',
   data () {
     return {
       swiperOptions: {
@@ -24,18 +25,18 @@ export default {
           stopOnLastSlide: false,
           disableOnInteraction: false
         }
-      },
-      isLoad: false
+      }
     }
   },
   props: {
     bannerImg: {
-      type: Array
+      Type: Array,
+      default: function () {
+      }
     }
   },
   components: {
-    Swiper,
-    SwiperSlide
+    Swiper, SwiperSlide
   },
   computed: {
     swiper () {
@@ -43,25 +44,16 @@ export default {
     }
   },
   mounted () {
-    // console.log('Current Swiper instance object', this.swiper)
     this.swiper.slideTo(0, 1000, false)
-  },
-  methods: {
-    imgLoad () {
-      if (!this.isLoad) { // 通过isLoad 设置只监听一次
-        this.$emit('swiperImgLoad')
-        this.isLoad = true
-      }
-    }
   }
 }
 </script>
 
 <style scoped lang="stylus">
-  .banner
-    img
-      width 100%
-      display block
-  .swiper-container
-    --swiper-pagination-color #ff5777
+.banner
+  img
+    width 100%
+.swiper-container
+  width 100%
+  height 500px
 </style>

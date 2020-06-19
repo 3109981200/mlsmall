@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <tabBarIndex/>
-    <keep-alive>
+    <!--使用exclude排除不需要缓存的组件-->
+    <keep-alive exclude="Details">
       <router-view/>
     </keep-alive>
   </div>

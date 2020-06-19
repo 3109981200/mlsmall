@@ -79,16 +79,6 @@ export default {
     this.$bus.$on('itemImgLoad', () => {
       refresh()
     })
-    // 监听图片点击
-    this.$bus.$on('goodsItemClick', (id) => {
-      //  console.log(id)
-      this.$router.push({
-        path: '/goodsDetails',
-        query: {
-          id: id
-        }
-      })
-    })
   },
   activated () {
     // console.log('进入')
