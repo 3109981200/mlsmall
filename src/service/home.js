@@ -72,6 +72,9 @@ export class Shop {
 // 商品信息类
 export class GoodsParams {
   constructor (itemParams, detailInfo) {
-
+    this.desc = detailInfo.desc
+    this.detailImages = detailInfo.detailImage
+    this.sizeInfo = itemParams.rule
+    this.style = itemParams.info
   }
 }

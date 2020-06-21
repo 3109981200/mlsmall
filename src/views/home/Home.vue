@@ -150,7 +150,7 @@ export default {
     getHomeGoods (Type) {
       // console.log(Type)
       getGoods().then(res => {
-      //  console.log(res)
+        console.log(res)
         this.goods[Type].list.push(...res[Type].list.slice(this[Type].pageIndex, this[Type].pageSize + this[Type].pageIndex) || [])
         // console.log(this.goods[Type])
         this[Type].pageIndex += 40
