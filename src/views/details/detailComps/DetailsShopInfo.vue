@@ -38,43 +38,43 @@ export default {
 
 <style scoped lang="stylus">
   .shop
-    padding 10px
+    padding .625rem
     display flex
-    font-size 14px
+    font-size .875rem
     align-items center
-    border-bottom 10px solid rgba(214,214,214,0.361)
+    border-bottom .625rem solid rgba(214,214,214,0.361)
     .avatar
-      margin-right 10px
+      margin-right .625rem
       img
-        width 60px
-        height 60px
+        width 3.75rem
+        height 3.75rem
     &-info
       width 100%
       .top
         display flex
         justify-content space-between
       .center
-        padding 5px 0
-        font-size 12px
+        padding .3125rem 0
+        font-size .75rem
         img
-          width 10px
-          height 10px
-          margin-right 5px
+          width .625rem
+          height .625rem
+          margin-right .3125rem
         span
           border-left 1px solid #ccc
-          padding-left 10px
-          margin-left 5px
+          padding-left .625rem
+          margin-left .3125rem
       .bottom
         span
           border 1px solid #ccc
           color #FF2255
-          margin-right 5px
-          border-radius 10px
-          padding 0 5px
-          font-size 12px
+          margin-right .3125rem
+          border-radius .625rem
+          padding 0 .3125rem
+          font-size .75rem
   .arrow-right
     img
-      width 16px
-      height 16px
+      width 1rem
+      height 1rem
       vertical-align middle
 </style>

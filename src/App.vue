@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <tabBarIndex/>
+    <tabBarIndex v-if="!showTab"/>
     <!--使用exclude排除不需要缓存的组件-->
-    <keep-alive exclude="Details">
+    <keep-alive exclude="Details,RateList">
       <router-view/>
     </keep-alive>
   </div>
@@ -15,13 +15,23 @@ export default {
   name: 'App',
   components: {
     tabBarIndex
-
   },
   data () {
     return {
+      showTab: false
     }
   },
   methods: {
+  },
+  watch: {
+    // 详情页不显示公共导航  通过监听路由实现
+    $route (e) {
+      if (e.path === '/details' || e.path === '/rate/list') {
+        this.showTab = true
+      } else {
+        this.showTab = false
+      }
+    }
   }
 }
 </script>

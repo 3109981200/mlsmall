@@ -39,37 +39,37 @@ export default {
 <style scoped lang="stylus">
   .goods-item
     flex 0 0 50%
-    padding 4px
+    padding .25rem
     img
       width 100%
       border-radius 2%
   .goods-info
-    padding-top 5px
+    padding-top .3125rem
     p
-      font-size 12px
+      font-size .8125rem
       overflow hidden
       text-overflow ellipsis
       -webkit-line-clamp 2
       word-break break-all
       display -webkit-box
       -webkit-box-orient vertical
-      line-height 16px
-      margin-bottom 5px
+      line-height 1rem
+      margin-bottom .3125rem
     .price
       font-family Arial Black
       font-weight 700
-      font-size 14px
+      font-size .875rem
       color #ff5777
     .cfav
-      font-size 12px
+      font-size .75rem
       float right
       &:before
         content ''
         display block
         position absolute
-        margin-left -16px
-        width 14px
-        height 14px
+        margin-left -1rem
+        width .875rem
+        height .875rem
         background url("~assets/img/common/cfav.svg") no-repeat
         background-size 100%
         z-index -999

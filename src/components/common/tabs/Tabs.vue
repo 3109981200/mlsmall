@@ -34,16 +34,13 @@ export default {
   display flex
   text-align center
   background #FFF
-  /*粘性定位 实现滚动到指定位置固定悬浮*/
-/*  position sticky
-  top 44px*/
   .tabs-item
     flex 1
-    height 44px
-    line-height 44px
+    height 2.75rem
+    line-height 2.75rem
   .tabs-item.active
     color #ff5777
     span
-      padding: 5px
-      border-bottom 2px solid #ff5777
+      padding: .3125rem
+      border-bottom .125rem solid #ff5777
 </style>

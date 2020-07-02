@@ -18,12 +18,12 @@ export default {
 <style scoped lang="stylus">
 .back-top
   position fixed
-  right 10px
-  bottom 54px
+  right .625rem
+  bottom 3.375rem
   img
-    width 40px
-    height 40px
+    width 2.5rem
+    height 2.5rem
     border-radius 100%
     background #FFF
-    padding 8px
+    padding .5rem
 </style>

@@ -31,7 +31,7 @@ import GoodsList from 'components/content/goods/GoodsList'
 import BannerSwiper from './homeComps/BannerSwiper'
 import BannerRecommend from './homeComps/BannerRecommend'
 
-import { getHomeMultidata, getGoods } from 'service/home'
+import { getHomeMultidata, getGoods } from 'service/api'
 import { debounce } from 'common/untis'
 
 export default {
@@ -74,7 +74,7 @@ export default {
     }
   },
   mounted () {
-    // 监听图片加载完成刷新scroll重新计算滚动高度 200毫秒内刷新一次
+    // 监听图片加载完成刷新scroll重新计算滚动高度 200毫秒内刷新一次 防抖
     const refresh = debounce(this.$refs.scroll.refresh, 200)
     this.$bus.$on('itemImgLoad', () => {
       refresh()
@@ -116,7 +116,7 @@ export default {
       }
       this.$refs.tabs1.currentIndex = index
       this.$refs.tabs2.currentIndex = index
-      this.$refs.scroll.scrollTo(0, -this.$refs.tabs2.$el.offsetTop)
+      this.$refs.scroll.scrollTo(0, -this.tabsOffsetTop)
     },
     swiperImgLoad () {
     //  console.log('swiperImgLoad')
@@ -150,7 +150,7 @@ export default {
     getHomeGoods (Type) {
       // console.log(Type)
       getGoods().then(res => {
-        console.log(res)
+        // console.log(res)
         this.goods[Type].list.push(...res[Type].list.slice(this[Type].pageIndex, this[Type].pageSize + this[Type].pageIndex) || [])
         // console.log(this.goods[Type])
         this[Type].pageIndex += 40
@@ -180,8 +180,8 @@ export default {
   height 100vh
 .content
   position absolute
-  top 44px
-  bottom 49px
+  top 2.75rem
+  bottom 3.0625rem
   left 0
   right 0
 .nav-home

@@ -63,6 +63,12 @@ export default {
     refresh () {
       // console.log('222')
       this.scroll && this.scroll.refresh()
+    },
+    disable () {
+      this.scroll && this.scroll.disable()
+    },
+    enable () {
+      this.scroll && this.scroll.enable()
     }
   }
 }

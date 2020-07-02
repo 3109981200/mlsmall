@@ -37,6 +37,15 @@ export function getGoodsRecommends () {
     url: '/data/goods_recommend.json'
   })
 }
+/**
+ ratelist
+ * */
+export function getRateList () {
+  return Service({
+    url: '/data/goods_rate.json'
+  })
+}
+
 // 商品类
 export class Goods {
   constructor (itemInfo, priceInfo, itemServices) {
@@ -46,6 +55,8 @@ export class Goods {
     this.currency = priceInfo.currency
     this.nowPrice = priceInfo.nowPrice
     this.oldPrice = priceInfo.oldPrice
+    this.highNowPrice = priceInfo.highNowPrice || ''
+    this.priceSplit = priceInfo.priceSplit
     this.priceTags = priceInfo.priceTags[0].text
     itemServices.columns.map(item => {
       if (item.name === 'address') { this.address = item.desc }

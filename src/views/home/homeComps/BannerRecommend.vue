@@ -30,15 +30,15 @@ export default {
 <style scoped lang="stylus">
   .recommend
     display flex
-    padding-bottom 20px
+    padding-bottom 1.25rem
   .recommend-item
     flex 0 0 20%
     text-align center
-    padding 8px 0
+    padding .5rem 0
   .rec-img
     img
-      width 50px
-      margin-bottom 5px
+      width 3.125rem
+      margin-bottom .3125rem
   .text
-    font-size 12px
+    font-size .75rem
 </style>

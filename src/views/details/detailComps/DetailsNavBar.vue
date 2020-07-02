@@ -17,7 +17,7 @@ export default {
   name: 'DetailsNavBar',
   data () {
     return {
-      titles: ['商品', '参数', '评论', '推荐'],
+      titles: ['商品', '评论', '详情', '推荐'],
       currentIndex: 0,
       backImg: require('assets/img/common/back.svg')
     }
@@ -28,6 +28,7 @@ export default {
   methods: {
     itemClick (index) {
       this.currentIndex = index
+      this.$emit('itemClick', index)
     },
     goBack () {
       this.$router.back()
@@ -38,9 +39,11 @@ export default {
 
 <style scoped lang="stylus">
 .go-back
+  text-align left
+  margin-left .625rem
   img
-    width 24px
-    height 24px
+    width 1.5rem
+    height 1.5rem
     vertical-align middle
 .title
   display flex

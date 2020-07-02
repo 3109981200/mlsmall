@@ -59,17 +59,17 @@ export default {
 
 <style scoped lang="stylus">
 .btn-addCar
-  width 100px
-  height 49px
+  width 6.25rem
+  height 3.0625rem
   background #ffe6e8
-  line-height 49px
+  line-height 3.0625rem
   text-align center
   color #ff5777
 .btn-buy
-  width 100px
-  height 49px
+  width 6.25rem
+  height 3.0625rem
   background #ff468f
-  line-height 49px
+  line-height 3.0625rem
   text-align center
   color #FFF
 </style>

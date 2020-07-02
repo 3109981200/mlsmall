@@ -32,5 +32,5 @@ export default {
 .goods
   display flex
   flex-wrap wrap
-  padding 2px
+  padding .125rem
 </style>

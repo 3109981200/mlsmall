@@ -13,6 +13,7 @@ const Details = () => import('views/details/Details')
 const Shop = () => import('views/shop/Shop')
 const Customer = () => import('views/customer/Customer')
 const Collect = () => import('views/collect/Collect')
+const Rate = () => import('views/rate/RateList')
 // 创建路有对象
 const routes = [
   {
@@ -73,6 +74,13 @@ const routes = [
     component: Collect,
     meta: {
       title: '收藏页'
+    }
+  },
+  {
+    path: '/rate/list',
+    component: Rate,
+    meta: {
+      title: '评论页'
     }
   }
 ]

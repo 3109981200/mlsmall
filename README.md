@@ -4,7 +4,7 @@
 ```
 vue-cli3、vue-router、axios、element-ui、vue-awesome-swiper、
 json-server（模拟后端接口）、Mockjs（生成模拟数据）、better-scroll(滚动插件)、
-vue-waterfall2 瀑布流组件
+vue-waterfall2 瀑布流组件、使用swiper实现图片点击放大切换效果（评论页）
 
 ```
 ## Project setup

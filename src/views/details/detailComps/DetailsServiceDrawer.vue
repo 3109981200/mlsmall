@@ -18,8 +18,7 @@ export default {
   name: 'DetailsServiceDialog',
   data () {
     return {
-      direction: 'btt',
-      handleCallback: null
+      direction: 'btt'
     }
   },
   props: {
@@ -43,25 +42,25 @@ export default {
   text-align center
   color #999
 .content
-  padding 15px
-  font-size 12px
+  padding .9375rem
+  font-size .75rem
   text-align left
   &-item
     border-bottom 1px solid #a8a8a8
-    margin-bottom 20px
+    margin-bottom 1.25rem
     &:last-child
       border none
       margin-bottom 0
     &-title
       color #666
-      padding-bottom 10px
+      padding-bottom .625rem
     &-desc
-      padding-bottom 10px
+      padding-bottom .625rem
       color #999
-      line-height 20px
+      line-height 1.25rem
 .services >>> .el-drawer
     height auto!important
 .services >>> .el-drawer__header
       margin 0
-      padding 20px
+      padding 1.25rem
 </style>

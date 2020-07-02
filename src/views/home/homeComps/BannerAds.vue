@@ -50,26 +50,26 @@ export default {
 <style scoped lang="stylus">
 .ads
   display flex
-  padding 10px 5px
+  padding .625rem .3125rem
   .ads-item
     flex 0 0 25%
-    padding 5px
+    padding .3125rem
     align-items center
     text-align center
     position relative
-    font-size 14px
+    font-size .875rem
     img
       width 100%
     p
       position absolute
-      bottom 10px
+      bottom .625rem
       left 0
       right 0
       color #FFF
       font-weight 700
     .time
       position absolute
-      bottom 30px
+      bottom 1.875rem
       left 0
       right 0
       font-weight 700
