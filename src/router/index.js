@@ -35,7 +35,7 @@ const routes = [
     }
   },
   {
-    path: '/cart',
+    path: '/cart/cartList',
     component: Cart,
     meta: {
       title: '购物车'

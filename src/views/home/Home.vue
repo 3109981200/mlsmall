@@ -24,13 +24,12 @@ import NavBar from 'components/common/navbar/NavBar'
 import Tabs from 'components/common/tabs/Tabs'
 import BScroll from 'components/common/bscroll/BScroll'
 import BannerAds from './homeComps/BannerAds'
-import BackTop from 'components/common/backtop/BackTop'
 import GoodsList from 'components/content/goods/GoodsList'
 /* import Axios from 'axios' */
 
 import BannerSwiper from './homeComps/BannerSwiper'
 import BannerRecommend from './homeComps/BannerRecommend'
-
+import { backTopMixin } from 'common/mixins'
 import { getHomeMultidata, getGoods } from 'service/api'
 import { debounce } from 'common/untis'
 
@@ -43,8 +42,7 @@ export default {
     BannerAds,
     Tabs,
     GoodsList,
-    BScroll,
-    BackTop
+    BScroll
   },
   data () {
     return {
@@ -62,8 +60,6 @@ export default {
       sell: { pageIndex: 0, pageSize: 40 },
       new: { pageIndex: 0, pageSize: 40 },
       currentGoodsType: 'pop',
-      backTopImgUrl: require('assets/img/common/back-top.svg'),
-      showBackTop: false, // 返回顶部
       /* better-scroll参数 */
       scrollProbeType: 3,
       scrollPullUpLoad: true,
@@ -73,6 +69,7 @@ export default {
       positionY: 0 // 记录离开时的位置
     }
   },
+  mixins: [backTopMixin],
   mounted () {
     // 监听图片加载完成刷新scroll重新计算滚动高度 200毫秒内刷新一次 防抖
     const refresh = debounce(this.$refs.scroll.refresh, 200)
@@ -127,9 +124,6 @@ export default {
     contentScroll (position) {
       this.showBackTop = (-position.y) > 1000
       this.isFixed = (-position.y) > this.tabsOffsetTop
-    },
-    backClick () {
-      this.$refs.scroll.scrollTo(0, 0, 500)
     },
     loadMore () {
       // console.log('上拉加载更多')

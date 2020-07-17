@@ -30,7 +30,7 @@ export default {
   name: 'mainTabBar',
   data () {
     return {
-      path: ['/home', '/category', '/cart', '/profile'],
+      path: ['/home', '/category', '/cart/cartList', '/profile'],
       activeColor: '#FF5777',
       homeIcon: require('assets/img/tabbar/home.svg'),
       homeActiveIcon: require('assets/img/tabbar/home_active.svg'),

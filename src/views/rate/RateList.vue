@@ -2,7 +2,7 @@
     <div class="rate">
       <!--顶部导航-->
       <RateNavBar></RateNavBar>
-      <BScroll ref="scroll" class="content" :probeType="scrollProbeType" :scrollClick="scrollClick">
+      <BScroll ref="scroll" class="content" :probeType="scrollProbeType" :scrollClick="scrollClick" @scroll="contentScroll">
         <!--评论头部信息-->
         <RateListHead :averageScore="averageScore" :rateTags="rateTags" />
         <!--评论列表-->
@@ -22,6 +22,7 @@
           <div class="swiper-pagination" slot="pagination"></div>
         </Swiper>
       </div>
+      <BackTop :bacTopImg="backTopImgUrl" v-show="showBackTop" @click.native="backClick" />
     </div>
 </template>
 
@@ -32,6 +33,7 @@ import RateListHead from './rateComps/RateListHead'
 import RateListItem from './rateComps/RateListItem'
 import BScroll from 'components/common/bscroll/BScroll'
 import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
+import { backTopMixin } from 'common/mixins'
 
 export default {
   name: 'RateList',
@@ -65,6 +67,7 @@ export default {
     Swiper,
     SwiperSlide
   },
+  mixins: [backTopMixin],
   created () {
     this.goodsId = this.$route.query.itemId
     this.getRates()
@@ -110,6 +113,9 @@ export default {
     closeSwiper () {
       this.showSwiper = false
       this.$refs.scroll.refresh()
+    },
+    contentScroll (position) {
+      this.showBackTop = (-position.y) > 1000
     }
   }
 }

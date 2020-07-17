@@ -44,6 +44,7 @@
                        :showPriceDrawer="showPriceDrawer"
                        :skuInfo="skuInfo"
                        :goods="goodsInfo"
+                       :shopInfo="shopInfo"
                        @closePriceDrawer="closePriceDrawer" />
    <!--回到顶部-->
    <BackTop :bacTopImg="backTopImgUrl" v-show="showBackTop" @click.native="backClick" />
@@ -64,14 +65,13 @@ import GoodsDetailsInfo from './detailComps/GoodsDetailsInfo'
 import RecommendGoods from 'components/content/goods/RecommendGoods'
 import BScroll from 'components/common/bscroll/BScroll'
 import Tabs from 'components/common/tabs/Tabs'
-import BackTop from 'components/common/backtop/BackTop'
+import { backTopMixin, arrowRightMixin } from 'common/mixins'
 
 export default {
   name: 'Details',
   data () {
     return {
       noneImg: require('assets/img/common/none.png'),
-      arrowRight: require('assets/img/common/arrow-right.svg'),
       id: '', // 商品ID
       details: [], // 商品合集
       recommends: [], // 推荐商品
@@ -92,9 +92,7 @@ export default {
       rateOffsetTop: 0, // 评论位置
       infoOffsetTop: 0, // 详情位置
       paramOffsetTop: 0, // 参数位置
-      recommendOffsetTop: 0, // 推荐商品位置
-      backTopImgUrl: require('assets/img/common/back-top.svg'),
-      showBackTop: false // 返回顶部
+      recommendOffsetTop: 0 // 推荐商品位置
     }
   },
   components: {
@@ -108,10 +106,10 @@ export default {
     GoodsDetailsInfo,
     BScroll,
     Tabs,
-    BackTop,
     DetailsServiceDrawer,
     DetailsPriceDrawer
   },
+  mixins: [backTopMixin, arrowRightMixin],
   computed: {
     goodsId () {
       return this.$route.query.id
@@ -120,6 +118,11 @@ export default {
   created () {
     this.getDetails()
     this.getRecommends()
+  },
+  mounted () {
+    this.$bus.$on('priceClick', () => {
+      this.priceClick()
+    })
   },
   methods: {
     getDetails () {
@@ -231,9 +234,6 @@ export default {
       } else if (-position.y >= this.recommendOffsetTop) {
         this.$refs.navBar.currentIndex = 3
       }
-    },
-    backClick () {
-      this.$refs.scroll.scrollTo(0, 0, 500)
     }
   }
 }

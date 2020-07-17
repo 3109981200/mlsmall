@@ -49,9 +49,11 @@ export default {
     },
     addCart () {
       console.log('加入购物车')
+      this.$bus.$emit('priceClick')
     },
     buyNow () {
       console.log('立即购买')
+      this.$bus.$emit('priceClick')
     }
   }
 }

@@ -31,11 +31,11 @@
 
 <script>
 import { formatDate } from 'common/untis'
+import { arrowRightMixin } from 'common/mixins'
 export default {
   name: 'DetailsRateInfo',
   data () {
     return {
-      arrowRight: require('assets/img/common/arrow-right.svg')
     }
   },
   props: {
@@ -44,6 +44,7 @@ export default {
       default: {}
     }
   },
+  mixins: [arrowRightMixin],
   created () {
   //   console.log(this.rateInfo)
     this.rateInfo.list.map(item => {
