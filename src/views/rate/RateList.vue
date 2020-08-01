@@ -1,5 +1,5 @@
 <template>
-    <div class="rate">
+    <div class="rate" v-loading.fullscreen.lock="isLoading">
       <!--顶部导航-->
       <RateNavBar></RateNavBar>
       <BScroll ref="scroll" class="content" :probeType="scrollProbeType" :scrollClick="scrollClick" @scroll="contentScroll">
@@ -39,6 +39,7 @@ export default {
   name: 'RateList',
   data () {
     return {
+      isLoading: false,
       goodsId: '', // 商品ID
       averageScore: 0, // 综合评分
       bottomText: '', // 底部文字
@@ -76,6 +77,7 @@ export default {
   methods: {
     // 遍历结果获取当前goodsID下的评论内容
     getRates () {
+      this.isLoading = true
       getRateList().then(res => {
         // console.log(res)
         const results = res.list
@@ -95,6 +97,7 @@ export default {
         })
         //    console.log(this.rateList)
         //    console.log(this.rateTags)
+        this.isLoading = false
       }).catch(err => {
         console.log(err)
       })
@@ -127,7 +130,7 @@ export default {
   height 100vh
   .content
     position absolute
-    top 2.75rem
+    top 44px
     bottom 0
     left 0
     right 0
@@ -160,11 +163,11 @@ export default {
       .swiper-pagination
         color #fff
         position absolute
-        right 1.25rem
+        right 20px
         left auto
-        bottom 1.25rem
+        bottom 20px
         width auto
-        padding .1875rem .9375rem
+        padding 3 15px
         background rgba(0,0,0,.5)
-        border-radius .9375rem
+        border-radius 15px
 </style>

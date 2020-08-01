@@ -26,10 +26,10 @@ export default {
     },
     itemClick () {
       this.$router.push({
-        path: '/details',
-        query: {
+        path: `/details/${this.goodsItem.iid}`
+        /* query: {
           id: this.goodsItem.iid
-        }
+        } */
       })
     }
   }
@@ -39,37 +39,37 @@ export default {
 <style scoped lang="stylus">
   .goods-item
     flex 0 0 50%
-    padding .25rem
+    padding 4px
     img
       width 100%
       border-radius 2%
   .goods-info
-    padding-top .3125rem
+    padding-top 5px
     p
-      font-size .8125rem
+      font-size 13px
       overflow hidden
       text-overflow ellipsis
       -webkit-line-clamp 2
       word-break break-all
       display -webkit-box
       -webkit-box-orient vertical
-      line-height 1rem
-      margin-bottom .3125rem
+      line-height 16px
+      margin-bottom 5px
     .price
       font-family Arial Black
       font-weight 700
-      font-size .875rem
+      font-size 14px
       color #ff5777
     .cfav
-      font-size .75rem
+      font-size 12px
       float right
       &:before
         content ''
         display block
         position absolute
-        margin-left -1rem
-        width .875rem
-        height .875rem
+        margin-left -16px
+        width 14px
+        height 14px
         background url("~assets/img/common/cfav.svg") no-repeat
         background-size 100%
         z-index -999

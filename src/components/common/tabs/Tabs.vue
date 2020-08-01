@@ -36,11 +36,11 @@ export default {
   background #FFF
   .tabs-item
     flex 1
-    height 2.75rem
-    line-height 2.75rem
+    height 44px
+    line-height 44px
   .tabs-item.active
     color #ff5777
     span
-      padding: .3125rem
-      border-bottom .125rem solid #ff5777
+      padding: 5px
+      border-bottom 2px solid #ff5777
 </style>

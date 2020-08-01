@@ -1,5 +1,5 @@
 <template>
-    <div id="home">
+    <div id="home" v-loading.fullscreen.lock="isLoading">
       <NavBar class="nav-home"><div slot="center">购物街</div></NavBar>
       <Tabs :titles="tabsTitles" @tabsClick="tabsClick" ref="tabs1" v-show="isFixed" class="fixed"/>
       <BScroll class="content" ref="scroll"
@@ -46,6 +46,7 @@ export default {
   },
   data () {
     return {
+      isLoading: false,
       bannerImg: [],
       recommend: [],
       tabsTitles: ['流行', '新款', '精选'],
@@ -142,6 +143,7 @@ export default {
       })
     },
     getHomeGoods (Type) {
+      this.isLoading = true
       // console.log(Type)
       getGoods().then(res => {
         // console.log(res)
@@ -149,6 +151,7 @@ export default {
         // console.log(this.goods[Type])
         this[Type].pageIndex += 40
         this.$refs.scroll.finishPullUp() // 载数据加载完毕后，需要执行 finishPullUp
+        this.isLoading = false
       }).catch(err => {
         console.log(err)
       })
@@ -174,8 +177,8 @@ export default {
   height 100vh
 .content
   position absolute
-  top 2.75rem
-  bottom 3.0625rem
+  top 44px
+  bottom 49px
   left 0
   right 0
 .nav-home

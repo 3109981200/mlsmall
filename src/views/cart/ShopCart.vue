@@ -2,8 +2,8 @@
     <div class="shopping-cart">
       <CartNavbar></CartNavbar>
       <BScroll ref="scroll" class="content" :probeType="scrollProbeType" :scrollClick="scrollClick">
-      <div class="order-list" v-if="cartList.length!=0">
-        <div class="order-list-item" v-for="(item, index) in cartList" :key="index">
+      <div class="order-list" v-if="cartLists.length!=0">
+        <div class="order-list-item" v-for="(item, index) in cartLists" :key="index">
           <div class="order-list-item-shop">
             <div><input type="checkbox" id="checkbox"><label for="checkbox" class="label"></label></div>
             <div class="title"><img :src="item.shopInfo.logo" alt="">{{item.shopInfo.name}}</div>
@@ -33,11 +33,11 @@
 import CartNavbar from './cartComps/CartNavbar'
 import TabBar from 'components/common/tabbar/TabBar'
 import BScroll from 'components/common/bscroll/BScroll'
+import { mapState } from 'vuex'
 export default {
   name: 'ShopCart',
   data () {
     return {
-      cartList: this.$store.state.cartList,
       scrollProbeType: 3,
       scrollClick: true
     }
@@ -47,8 +47,13 @@ export default {
     TabBar,
     BScroll
   },
+  computed: {
+    ...mapState({
+      cartLists: state => state.cartList
+    })
+  },
   created () {
-    console.log(this.cartList)
+    console.log(this.cartLists)
   }
 }
 </script>

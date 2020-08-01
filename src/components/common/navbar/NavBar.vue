@@ -16,12 +16,12 @@ export default {
 .navBar
   display flex
   align-items center
-  height 2.75rem
-  line-height 2.75rem
+  height 44px
+  line-height 44px
   width 100%
   box-shadow 0 1px 1px rgba(50,50,50,.1);
   .left, .right
-    width 4.5rem
+    width 72px
     text-align center
   .center
     flex 1

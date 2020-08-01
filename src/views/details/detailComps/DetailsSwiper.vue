@@ -65,5 +65,5 @@ export default {
     width 100%
 .swiper-container
   width 100%
-  height 31.25rem
+  height 500px
 </style>

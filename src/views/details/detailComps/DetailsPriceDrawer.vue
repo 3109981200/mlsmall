@@ -228,8 +228,8 @@ export default {
 <style scoped lang="stylus">
 .content
     position absolute
-    top 6.25rem
-    bottom 3.0625rem
+    top 120px
+    bottom 49px
     left 0
     right 0
     overflow hidden
@@ -239,124 +239,124 @@ export default {
     overflow visible
   >>> .el-drawer__header
     margin 0
-    padding 1.25rem .625rem .5rem
+    padding 20px 10px 8px
     background #FFF
     z-index 2
   >>> .el-drawer__close-btn
     position absolute
-    top .625rem
-    right .625rem
+    top 10px
+    right 10px
   .title
     position relative
-    height 5rem
+    height 90px
     &-img
-      width 6rem
-      max-height 10rem
+      width 96px
+      max-height 160px
       background #FFF
       position absolute
-      bottom .5rem
-      border-radius .2rem
-      box-shadow 0 0.08rem 0.16rem 0 rgba(0,0,0,.1)
+      bottom 8px
+      border-radius 3px
+      box-shadow 0 1px 2px 0 rgba(0,0,0,.1)
       img
         width 100%
     &-price
-      margin-left 6.625rem
+      margin-left 106px
       color #000
       &-text
         display flex
       &-ico
-        font-size .875rem
-        padding-top .3125rem
+        font-size 14px
+        padding-top 5px
       &-price
-        font-size 2rem
+        font-size 32px
       &-sku
-        font-size .875rem
-        padding-bottom .3125rem
+        font-size 14px
+        padding-bottom 5px
       &-size
-        font-size .875rem
+        font-size 14px
         overflow: hidden
         text-overflow: ellipsis
         display: -webkit-box
         -webkit-line-clamp: 1
         -webkit-box-orient: vertical
         span
-          font-size .75rem
+          font-size 12px
         .active
           color #ff5777
   .color
-    padding 0 .625rem
+    padding 0 10px
     font-size .875rem
     color #666
     &-title
-      padding .5rem 0
+      padding 8px 0
     &-item
       display flex
       flex-wrap wrap
       div
-        padding .3rem .625rem
+        padding 5px 10px
         border 1px solid #999
-        margin 0 .625rem .625rem 0
-        border-radius .2rem
+        margin 0 10px 10px 0
+        border-radius 3px
       .active
         color  #ff5777
         border 1px solid #ff5777!important
   .size
-    padding 0 .625rem
-    font-size .875rem
+    padding 0 10px
+    font-size 14px
     color #666
     &-title
-      padding .5rem 0
+      padding 8px 0
     &-item
       display flex
       flex-wrap wrap
       div
-        padding .3rem .625rem
+        padding 5px 10px
         border 1px solid #999
-        margin 0 .625rem .625rem 0
-        border-radius .2rem
+        margin 0 10px 10px 0
+        border-radius 3px
       .active
         color  #ff5777
         border 1px solid #ff5777!important
   .counter
-    padding .625rem
+    padding 10px
     .box
       display flex
       border 1px solid #999
-      border-radius .2rem
-      width 8rem
-      font-size 1.25rem
+      border-radius 3px
+      width 128px
+      font-size 20px
       justify-content space-around
       text-align center
-      margin .5rem 0
+      margin 8px 0
       align-items center
     .num
       border-left 1px solid #999
       border-right  1px solid #999
-      width 3rem
-      padding .3125rem 0
-      font-size 1rem
-      line-height 1.45rem
+      width 48px
+      padding 5px 0
+      font-size 16px
+      line-height 23px
     .decreased
-      width 2rem
-      padding .3125rem 0
+      width 32px
+      padding 5px 0
     .increased
-      width 2rem
-      padding .3125rem 0
+      width 32px
+      padding 5px 0
       color #ff5777
   .btn-bar
     position absolute
     bottom 0
     left 0
     right 0
-    height 3.0625rem
+    height 49px
     box-shadow 0 -1px 1px rgba(50,50,50,.1)
     display flex
     align-items center
     text-align center
     div
       flex 1
-      height 3.0625rem
-      line-height 3.0625rem
+      height 49px
+      line-height 49px
     .add-car
       background #ffe6e8
       color #ff5777
@@ -372,8 +372,8 @@ export default {
     text-align center
     transform translateX(-50%)
     z-index 2500
-    padding .75rem
-    border-radius .3rem
+    padding 12px
+    border-radius 5px
   @-webkit-keyframes fadeOut /*设置内容由显示变为隐藏*/
     0%
       opacity 1

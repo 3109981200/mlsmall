@@ -40,10 +40,10 @@ export default {
 <style scoped lang="stylus">
 .go-back
   text-align left
-  margin-left .625rem
+  margin-left 10px
   img
-    width 1.5rem
-    height 1.5rem
+    width 24px
+    height 24px
     vertical-align middle
 .title
   display flex

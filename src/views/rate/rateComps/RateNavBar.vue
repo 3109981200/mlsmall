@@ -28,14 +28,14 @@ export default {
 <style scoped lang="stylus">
 .rate-navbar
   position relative
-  font-size 1.25rem
+  font-size 20px
   background #FFF
   z-index 99
   img
-    width 1.5rem
-    height 1.5rem
+    width 24px
+    height 24px
     vertical-align middle
   .go-back
     text-align left
-    margin-left .625rem
+    margin-left 10px
 </style>

@@ -42,25 +42,25 @@ export default {
   text-align center
   color #999
 .content
-  padding .9375rem
-  font-size .75rem
+  padding 15px
+  font-size 13px
   text-align left
   &-item
     border-bottom 1px solid #a8a8a8
-    margin-bottom 1.25rem
+    margin-bottom 20px
     &:last-child
       border none
       margin-bottom 0
     &-title
       color #666
-      padding-bottom .625rem
+      padding-bottom 10px
     &-desc
-      padding-bottom .625rem
+      padding-bottom 10px
       color #999
-      line-height 1.25rem
+      line-height 20px
 .services >>> .el-drawer
     height auto!important
 .services >>> .el-drawer__header
       margin 0
-      padding 1.25rem
+      padding 20px
 </style>

@@ -1,17 +1,16 @@
 // 具体请求API
-import { Service } from 'service/config'
+import axios from 'axios'
+import config from './config'
+
+const BASE_URL = config.BASE_URL
 /**
  * home
  */
 export function getHomeMultidata () {
-  return Service({
-    url: '/data/home.json'
-  })
+  return axios.get(`${BASE_URL}/home.json`)
 }
 export function getGoods () {
-  return Service({
-    url: '/data/goods.json'
-  })
+  return axios.get(`${BASE_URL}/goods.json`)
 }
 /*
 api 请求数据
@@ -28,22 +27,16 @@ export default getGoods (type, page){
  * details
  */
 export function getGoodsDetails () {
-  return Service({
-    url: '/data/goods_details.json'
-  })
+  return axios.get(`${BASE_URL}/goods_details.json`)
 }
 export function getGoodsRecommends () {
-  return Service({
-    url: '/data/goods_recommend.json'
-  })
+  return axios.get(`${BASE_URL}/goods_recommend.json`)
 }
 /**
  ratelist
  * */
 export function getRateList () {
-  return Service({
-    url: '/data/goods_rate.json'
-  })
+  return axios.get(`${BASE_URL}/goods_rate.json`)
 }
 
 // 商品类

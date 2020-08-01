@@ -55,60 +55,60 @@ export default {
 
 <style scoped lang="stylus">
   .goodsInfo
-    padding .625rem
-    border-bottom .625rem solid rgba(214,214,214,0.361)
+    padding 10px
+    border-bottom 10px solid rgba(214,214,214,0.361)
     .price
       display flex
-      padding-bottom .625rem
+      padding-bottom 10px
     .price-now
       display flex
-      margin-right .625rem
+      margin-right 10px
     .price-price
-      font-size 1.875rem
+      font-size 30px
       color #000
-      line-height 1.875rem
+      line-height 30px
     .price-unit
-      line-height 1.375rem
-      font-size: .875rem
+      line-height 22px
+      font-size: 14px
     .price-old-price
       color #999
       text-decoration line-through
-      font-size .75rem
+      font-size 12px
     .price-old-tags
       color rgb(255, 34, 85)
       background-color rgb(255, 232, 238)
-      font-size .8125rem
+      font-size 13px
       text-align center
-      padding 0 .3125rem
+      padding 0 5px
     .title-info
       display flex
-      padding-bottom .625rem
+      padding-bottom 10px
     .title
-      font-size .875rem
+      font-size 14p
       color #666
-      line-height 1.25rem
+      line-height 20px
       overflow hidden
       text-overflow ellipsis
       display -webkit-box
       -webkit-box-orient vertical
       -webkit-line-clamp 2
-      margin-right 5rem
+      margin-right 80px
     .help
       background #f8f8f8
       color #999
       position absolute
       right 0
-      margin-top .625rem
-      font-size .8125rem
-      padding .3125rem .625rem
-      border-top-left-radius 1.25rem
-      border-bottom-left-radius 1.25rem
+      margin-top 10px
+      font-size 13px
+      padding 5px 10px
+      border-top-left-radius 20px
+      border-bottom-left-radius 20px
       img
-        width .8125rem
-        height .8125rem
+        width 13px
+        height 13px
     .express-address
       color #999
-      font-size .625rem
+      font-size 10px
       display flex
       justify-content space-between
 </style>

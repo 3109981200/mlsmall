@@ -47,8 +47,8 @@ export default {
     flex 1
     text-align center
     img
-      width 1.5rem
-      height 1.5rem
+      width 24px
+      height 24px
       vertical-align middle
-      margin-bottom .125rem
+      margin-bottom 2px
 </style>

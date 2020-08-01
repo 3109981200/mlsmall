@@ -22,23 +22,23 @@ export default {
 
 <style scoped lang="stylus">
   .goods-recommend
-    padding .625rem .3125rem
+    padding 10px 5px
     display flex
     flex-wrap wrap
     .item
       width 33.33%
-      padding 0 .3125rem
+      padding 0 5px
       padding-bottom 10px
       img
         width 100%
       .title
-        font-size .75rem
+        font-size 12px
         overflow: hidden
         text-overflow: ellipsis
         display: -webkit-box
         -webkit-box-orient: vertical
         -webkit-line-clamp:1
-        margin .3125rem 0
+        margin 5px 0
     .price
-      font-size .75rem
+      font-size 12px
 </style>

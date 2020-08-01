@@ -1,5 +1,5 @@
 <template>
- <div class="details">
+ <div class="details" v-loading.fullscreen.lock="isLoading">
    <!--详情页头部导航-->
    <DetailsNavBar ref="navBar" class="nav-details" @itemClick="navBarItemClick"></DetailsNavBar>
    <BScroll ref="scroll" class="content" :probeType="scrollProbeType" :scrollClick="scrollClick" @scroll="contentScroll">
@@ -71,6 +71,7 @@ export default {
   name: 'Details',
   data () {
     return {
+      isLoading: false,
       noneImg: require('assets/img/common/none.png'),
       id: '', // 商品ID
       details: [], // 商品合集
@@ -112,7 +113,8 @@ export default {
   mixins: [backTopMixin, arrowRightMixin],
   computed: {
     goodsId () {
-      return this.$route.query.id
+      /* return this.$route.query.id */
+      return this.$route.params.id
     }
   },
   created () {
@@ -126,6 +128,7 @@ export default {
   },
   methods: {
     getDetails () {
+      this.isLoading = true
       // 此处以静态数据模拟，真实情况下此处根据传过来的id发送网络请求，查询数据
       getGoodsDetails().then(res => {
         // 商品集合
@@ -149,6 +152,7 @@ export default {
             this.skuInfo = item.skuInfo
           }
         })
+        this.isLoading = false
       //  console.log(this.skuInfo)
       }).catch(err => {
         console.log(err)
@@ -254,39 +258,39 @@ export default {
     width 100%
 .content
   position absolute
-  top 2.75rem
-  bottom 3.0625rem
+  top 44px
+  bottom 49px
   left 0
   right 0
 .service
     display flex
-    padding 1rem
-    border-bottom .625rem solid rgba(214,214,214,0.361)
+    padding 16px
+    border-bottom 10px solid rgba(214,214,214,0.361)
     justify-content space-between
     align-items center
     div
       text-align center
-      font-size .75rem
+      font-size 12px
       color #666
     img
-      width .75rem
-      height .75rem
-      margin-right .125rem
+      width 12px
+      height 12px
+      margin-right 2px
       vertical-align middle
 .arrow-right
     img
-      width 1rem
-      height 1rem
+      width 16px
+      height 16px
       vertical-align middle
 .sizeColor
   display flex
-  padding 1rem
-  font-size .75rem
+  padding 16px
+  font-size 12px
   color #666
-  border-bottom .625rem solid rgba(214,214,214,0.361)
+  border-bottom 10px solid rgba(214,214,214,0.361)
   justify-content space-between
   align-items center
 .tab
-  font-size .875rem
+  font-size 14px
   border-bottom 1px solid #eee
 </style>

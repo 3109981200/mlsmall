@@ -71,22 +71,22 @@ export default {
 
 <style scoped lang="stylus">
   .detail
-    padding .625rem 0
+    padding 10px 0
     .desc
-      padding 1.25rem .625rem
+      padding 20px 10px
       &-text
-        font-size .875rem
+        font-size 14px
         color #727272
-        padding .625rem 0
-        line-height 1.25rem
+        padding 10px 0
+        line-height 20px
       .lineBar
-        width 6.25rem
+        width 100px
         height 1px
         background #666
         position relative
       .dot
-        width .3125rem
-        height .3125rem
+        width 5px
+        height 5px
         background #2e2e2e
         border-radius 100%
         display inline-block
@@ -99,20 +99,20 @@ export default {
           top -2px
           right 0
     .imgBox
-      padding-top .625rem
+      padding-top 10px
       .desc
-        padding .625rem
-        font-size .875rem
+        padding 10px
+        font-size 14px
     &-img
       img
         width 100%
     .size
-      padding 1.25rem .625rem
+      padding 20px 10px
       .row
         display flex
         border-bottom 1px solid #eee
-        padding .625rem 0
-        font-size .875rem
+        padding 10px 0
+        font-size 14px
         color #ff5777
       .col
         width 25%

@@ -38,5 +38,6 @@ export default {
 
 <style scoped lang="stylus">
 @import "assets/css/base.css";
-
+#app
+  overflow-y hidden
 </style>

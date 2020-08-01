@@ -49,7 +49,7 @@ const routes = [
     }
   },
   {
-    path: '/details',
+    path: '/details/:id',
     component: Details,
     meta: {
       title: '商品详情页'

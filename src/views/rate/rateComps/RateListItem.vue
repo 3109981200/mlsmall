@@ -96,47 +96,47 @@ export default {
 
 <style scoped lang="stylus">
 .rate-list-item
-  border-bottom .625rem solid rgba(214,214,214,0.361)
-  padding .625rem
+  border-bottom 10px solid rgba(214,214,214,0.361)
+  padding 10px
   &-user
     display flex
     justify-content flex-start
-    padding-bottom .625rem
+    padding-bottom 10px
     .avatar
       img
-        width 2.5rem
-        height 2.5rem
+        width 40px
+        height 40px
         border-radius 100%
         vertical-align middle
     .title
-      margin-left .625rem
+      margin-left 10px
       .username
-        font-size .875rem
-        line-height 1.25rem
+        font-size 14px
+        line-height 20px
       .info
         display flex
-        font-size .8125rem
-        line-height 1.5rem
+        font-size 13px
+        line-height 24px
         color #999
         &-size
-          margin-right  .3125rem
+          margin-right  5px
           .desc
             color #ff5777
   &-content
     .tags
-      font-size .8125rem
+      font-size 13px
       color #999
-      padding-bottom .625rem
-      line-height 1.25rem
+      padding-bottom 10px
+      line-height 20px
     .content
-      font-size .8125rem
-      line-height 1.25rem
-      padding-bottom .625rem
+      font-size 13px
+      line-height 20px
+      padding-bottom 10px
     .img
       display flex
       flex-wrap wrap
       margin 0 -1%
-      padding-bottom .625rem
+      padding-bottom 10px
       &-item
         flex 0 0 32%
         height 0
@@ -166,18 +166,18 @@ export default {
             vertical-align middle
   &-append
     background #f4f4f4
-    padding .625rem
-    font-size .8125rem
-    line-height 1.25rem
-    border-radius .625rem
-    margin-bottom .625rem
+    padding 10px
+    font-size 13px
+    line-height 20px
+    border-radius 10px
+    margin-bottom 10px
     position relative
     &:before
       content ''
-      border: .5rem solid transparent
+      border: 8px solid transparent
       border-bottom-color: #f4f4f4
-      top: -1rem
-      left: 1.25rem
+      top: -16px
+      left: 20px
       position absolute
     .noexpend
       overflow hidden
@@ -186,17 +186,17 @@ export default {
       -webkit-line-clamp 3
       -webkit-box-orient vertical
     .moreBtn
-      margin-top .3125rem
-      font-size .75rem
+      margin-top 5px
+      font-size 12px
       align-items center
       display flex
       justify-content flex-end
       color #1296db
     i
       background-size cover
-      width 1rem
-      height 1rem
-      margin-left 0.1rem
+      width 16px
+      height 16px
+      margin-left 2px
     .show
       background-image url("~assets/img/common/show.svg")
     .hide
@@ -206,19 +206,19 @@ export default {
   &-date
     display flex
     justify-content space-between
-    font-size .875rem
+    font-size 14px
     color #999999
     align-items center
     .btn
       border 1px solid rgb(214,214,214)
-      border-radius 1.25rem
-      padding .3125rem .625rem
+      border-radius 20px
+      padding 5px 10px
       display flex
       align-items center
     .useful
       background-image url("~assets/img/common/useful.svg")
       background-size cover
-      width .9375rem
-      height .9375rem
+      width 15px
+      height 15px
       display block
 </style>

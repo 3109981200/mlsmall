@@ -49,41 +49,41 @@ export default {
 <style scoped lang="stylus">
   .rate
     &-head
-      border-bottom .625rem solid rgba(214,214,214,0.361)
+      border-bottom 10px solid rgba(214,214,214,0.361)
       &-score
         background #fef0f0
-        font-size .875rem
-        padding .9375rem .625rem
+        font-size 14px
+        padding 15px 10px
         span
           color #ff5777
       &-tag
-        padding .625rem 1.25rem 0
+        padding 10px 20px 0
         .tag1
           height auto
       &-tags
         display flex
         flex-wrap wrap
         align-items center
-        height 4.375rem
+        height 70px
         overflow hidden
         &-item
-          padding .3125rem .625rem
-          font-size .875rem
+          padding 5px 10px
+          font-size 14px
           background-color #fef0f0
-          border-radius .1875rem
-          margin-bottom .625rem
-          margin-right .5rem
+          border-radius 3px
+          margin-bottom 10px
+          margin-right 8px
           &:first-child
             background-color #ff5777
             color #FFF
-            font-size .9375rem
-            border-radius .1875rem
+            font-size 15px
+            border-radius 3px
           span
-            margin-right .3125rem
+            margin-right 5px
       .more
         background-image url("~assets/img/common/more.svg")
         background-size cover
-        width 1.25rem
-        height 1.25rem
+        width 20px
+        height 20px
         margin 0 auto
 </style>

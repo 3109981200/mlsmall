@@ -73,56 +73,56 @@ export default {
     &-top
       display flex
       justify-content space-between
-      font-size .75rem
+      font-size 12px
       color #999
-      padding-top .625rem
+      padding-top 10px
     &-tags
       display flex
       flex-wrap wrap
       align-items center
-      font-size .75rem
-      padding .625rem 0
+      font-size 12px
+      padding 10px 0
       div
-        padding .75rem .3125rem 0 0
+        padding 10px 5px 0 0
       span
-        padding .1875rem .3125rem
-        border-radius .125rem
+        padding 3px 5px
+        border-radius 2px
         background-color #f6f6f6
       .positive
         color: #FF2255
         background-color: #FFE8EE
     &-item
-      padding 1.25rem 0
+      padding 20px 0
       border-bottom 1px solid #eee
       &-top
         display flex
         align-items center
-        padding-bottom .625rem
+        padding-bottom 10px
         img
-          width 1.875rem
-          height 1.875rem
+          width 30px
+          height 30px
           border-radius 100%
-          margin-right .625rem
+          margin-right 10px
       &-content
-        font-size .875rem
-        padding-bottom .625rem
-        line-height 1.25rem
+        font-size 14px
+        padding-bottom 10px
+        line-height 20px
       &-date
       &-info
-        font-size .75rem
+        font-size 12px
         color #999
-        padding-bottom .625rem
+        padding-bottom 10px
         span
-          margin-right .625rem
+          margin-right 10px
     .explain
-      font-size .875rem
+      font-size 14px
       color #999
       border-top 1px #ddd dotted
-      padding-top .625rem
-      line-height 1.25rem
+      padding-top 10px
+      line-height 20px
   .arrow-right
     img
-      width 1rem
-      height 1rem
+      width 16px
+      height 16px
       vertical-align middle
 </style>
