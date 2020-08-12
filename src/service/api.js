@@ -39,6 +39,13 @@ export function getRateList () {
   return axios.get(`${BASE_URL}/goods_rate.json`)
 }
 
+/**
+ * profile
+ * */
+export function profileData () {
+  return axios.get(`${BASE_URL}/profile.json`)
+}
+
 // 商品类
 export class Goods {
   constructor (itemInfo, priceInfo, itemServices) {

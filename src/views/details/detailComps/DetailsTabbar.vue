@@ -12,9 +12,9 @@
           <div slot="item-text">客服</div>
         </TabBarItem>
         <TabBarItem :path="path[2]" :activeColor="activeColor" @click="itemClick">
-          <div slot="item-icon"><img :src="collectIcon" alt=""></div>
-          <div slot="item-icon-active"><img :src="collectActiveIcon" alt=""></div>
-          <div slot="item-text">收藏</div>
+          <div slot="item-icon"><img :src="cartIcon" alt=""></div>
+          <div slot="item-icon-active"><img :src="cartActiveIcon" alt=""></div>
+          <div slot="item-text">购物车</div>
         </TabBarItem>
         <div class="btn-addCar" @click="addCart">加入购物车</div>
         <div class="btn-buy" @click="buyNow">立即购买</div>
@@ -28,15 +28,15 @@ export default {
   name: 'DetailsTabbar',
   data () {
     return {
-      path: ['/shop', '/customer', '/collect'],
+      path: ['/shop', '/customer', '/cart/cartList'],
       activeColor: '#FF5777',
       isActive: true,
       customerIcon: require('assets/img/common/customer.svg'),
       customerActiveIcon: require('assets/img/common/customer_active.svg'),
       shopIcon: require('assets/img/common/shop.svg'),
       shopActiveIcon: require('assets/img/common/shop_active.svg'),
-      collectIcon: require('assets/img/common/collect.svg'),
-      collectActiveIcon: require('assets/img/common/collect_active.svg')
+      cartIcon: require('assets/img/tabbar/shopcart.svg'),
+      cartActiveIcon: require('assets/img/tabbar/shopcart_active.svg')
     }
   },
   components: {

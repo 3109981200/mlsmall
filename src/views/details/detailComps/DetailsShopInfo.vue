@@ -42,7 +42,7 @@ export default {
     display flex
     font-size 14px
     align-items center
-    border-bottom 10px solid rgba(214,214,214,0.361)
+    border-bottom 10px solid #f6f6f6
     .avatar
       margin-right 10px
       img

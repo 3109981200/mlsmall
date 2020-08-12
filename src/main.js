@@ -8,6 +8,7 @@ import waterfall from 'vue-waterfall2'
 import interceptor from './service/interceptor'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
+import toast from './components/common/toast'
 
 Vue.config.productionTip = false
 Vue.prototype.$bus = new Vue() // 创建事件总线
@@ -16,6 +17,7 @@ Vue.use(waterfall)
 Vue.use(VueAwesomeSwiper)
 Vue.use(interceptor)
 Vue.use(ElementUI)
+Vue.use(toast)
 
 new Vue({
   render: h => h(App),

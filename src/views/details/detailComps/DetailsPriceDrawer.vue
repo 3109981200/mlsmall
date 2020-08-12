@@ -51,15 +51,13 @@
         <span>立即购买</span>
       </div>
     </div>
-    <div class="message" v-if="showMessage" :class="{fadeOut: showFadeOut}">
-      {{message}}
-    </div>
   </el-drawer>
 </div>
 </template>
 
 <script>
 import BScroll from 'components/common/bscroll/BScroll'
+import { mapActions } from 'vuex'
 export default {
   name: 'DetailsPriceDrawer',
   components: {
@@ -82,10 +80,7 @@ export default {
       styleActive: false, // 选中样式
       styleCurrentIndex: '', // 当前选中的索引
       sizeActive: false,
-      sizeCurrentIndex: '',
-      showFadeOut: false,
-      showMessage: false,
-      message: ''
+      sizeCurrentIndex: ''
     }
   },
   props: {
@@ -123,8 +118,8 @@ export default {
     }
   },
   created () {
-    console.log(this.skuInfo)
-    console.log(this.goods)
+    // console.log(this.skuInfo)
+    // console.log(this.goods)
   },
   computed: {
     params () {
@@ -144,8 +139,11 @@ export default {
     }
   },
   methods: {
+    ...mapActions({
+      actionAddCart: 'addCart'
+    }),
     colorItemClick (obj, index) {
-      console.log(obj)
+      // console.log(obj)
       if (this.styleCurrentIndex === index && this.style) {
         // 点击移除选中样式
         this.styleActive = !this.styleActive
@@ -159,7 +157,7 @@ export default {
       }
     },
     sizeItemClick (obj, index) {
-      console.log(obj)
+      // console.log(obj)
       if (this.sizeCurrentIndex === index && this.size) {
         this.sizeActive = !this.sizeActive
         this.size = null
@@ -187,7 +185,7 @@ export default {
     decreased () {
       if (this.counter <= 1) {
         // console.log('decreased')
-        this.isMessage('至少购买一件哦！')
+        this.$toast.show('至少购买一件哦！')
       } else {
         this.counter -= 1
       }
@@ -202,24 +200,26 @@ export default {
       params = this.params
       Object.assign(params, { shopInfo: this.shopInfo })
       if (params.style === '颜色' || !params.style) {
-        this.isMessage('请选择颜色')
+        // console.log(this.$toast)
+        this.$toast.show('请选择颜色')
         return
       }
       if (params.size === '尺码' || !params.size) {
-        this.isMessage('请选择尺码')
+        this.$toast.show('请选择尺码')
         return
       }
-      console.log(params)
-      this.$store.dispatch('addCart', this.params)
-      this.$router.push('/cart/cartList')
-    },
-    isMessage (val) {
-      this.message = val
-      this.showMessage = true
-      this.showFadeOut = true
-      setTimeout(() => {
-        this.showMessage = false
-      }, 3000)
+      // console.log(params)
+      // 方式1 直接通过dispatch 返回一个promise,将actions的处理结果返回
+      /*      this.$store.dispatch('addCart', params).then(res => {
+        console.log(res)
+        this.$router.push('/cart/cartList')
+      }) */
+      // 方式2 直接通过actions映射调用 ...mapActions
+      this.actionAddCart(params).then(res => {
+        this.$toast.show(res)
+        this.$emit('closePriceDrawer')
+        // this.$router.push('/cart/cartList')
+      })
     }
   }
 }
@@ -363,22 +363,4 @@ export default {
     .buy-now
       background #ff5777
       color #FFF
-  .message
-    background rgba(0,0,0,.7)
-    color #FFF
-    position absolute
-    top 50%
-    left 50%
-    text-align center
-    transform translateX(-50%)
-    z-index 2500
-    padding 12px
-    border-radius 5px
-  @-webkit-keyframes fadeOut /*设置内容由显示变为隐藏*/
-    0%
-      opacity 1
-    100%
-      opacity 0
-  .fadeOut
-    -webkit-animation: fadeOut 3s ease
 </style>

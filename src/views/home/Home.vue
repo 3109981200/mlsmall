@@ -188,7 +188,7 @@ export default {
   color #FFF
 .banner-recommend
   flex-wrap wrap
-  border-bottom 10px solid #d6d6d65c
+  border-bottom 10px solid #f6f6f6
 .fixed
   position relative
   z-index 9

@@ -77,7 +77,7 @@ const routes = [
     }
   },
   {
-    path: '/rate/list',
+    path: '/rate/list/:id',
     component: Rate,
     meta: {
       title: '评论页'

@@ -70,7 +70,8 @@ export default {
   },
   mixins: [backTopMixin],
   created () {
-    this.goodsId = this.$route.query.itemId
+    /* this.goodsId = this.$route.query.itemId */
+    this.goodsId = this.$route.params.id
     this.getRates()
     // console.log(this.$route)
   },

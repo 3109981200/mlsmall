@@ -11,12 +11,14 @@
        <!--服务信息-->
        <div class="service" @click="serviceClick">
          <div v-for="(item, index) in goodsInfo.service.slice(0, 3)" :key="index"><img :src="item.icon" alt="">{{item.name}}</div>
-         <div class="arrow-right"><img :src="arrowRight" alt=""></div>
+         <!--<div class="arrow-right"><img :src="arrowRight" alt=""></div>-->
+         <Arrow-Right/>
        </div>
        <!--颜色款式选择-->
        <div class="sizeColor" @click="priceClick">
          <div>请选择: 颜色 尺码</div>
-         <div class="arrow-right"><img :src="arrowRight" alt=""></div>
+         <!--<div class="arrow-right"><img :src="arrowRight" alt=""></div>-->
+         <Arrow-Right/>
        </div>
        <!--评论信息-->
        <DetailsRateInfo ref="rateInfo" :rateInfo="rateInfo"></DetailsRateInfo>
@@ -265,7 +267,7 @@ export default {
 .service
     display flex
     padding 16px
-    border-bottom 10px solid rgba(214,214,214,0.361)
+    border-bottom 10px solid #f6f6f6
     justify-content space-between
     align-items center
     div
@@ -277,17 +279,17 @@ export default {
       height 12px
       margin-right 2px
       vertical-align middle
-.arrow-right
+/*.arrow-right
     img
       width 16px
       height 16px
-      vertical-align middle
+      vertical-align middle*/
 .sizeColor
   display flex
   padding 16px
   font-size 12px
   color #666
-  border-bottom 10px solid rgba(214,214,214,0.361)
+  border-bottom 10px solid #f6f6f6
   justify-content space-between
   align-items center
 .tab

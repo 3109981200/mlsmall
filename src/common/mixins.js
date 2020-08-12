@@ -20,9 +20,30 @@ export const backTopMixin = {
 
 // 向右箭头
 export const arrowRightMixin = {
-  data () {
-    return {
-      arrowRight: require('assets/img/common/arrow-right.svg')
+  components: {
+    'Arrow-Right': {
+      render (createElement) {
+        return createElement(
+          'div',
+          [
+            createElement('img', {
+              attrs: {
+                src: this.arrowRight
+              },
+              style: {
+                width: '16px',
+                height: '16px',
+                'vertical-align': 'middle'
+              }
+            })
+          ]
+        )
+      },
+      data () {
+        return {
+          arrowRight: require('assets/img/common/arrow-right.svg')
+        }
+      }
     }
   }
 }

@@ -3,7 +3,8 @@
   <div class="comment">
     <div class="comment-top" @click="handleClick">
       <div class="text">买家评论 {{rateInfo.cRate}} | 销量 {{rateInfo.sales}}</div>
-      <div class="arrow-right"><img :src="arrowRight" alt=""></div>
+      <!--<div class="arrow-right"><img :src="arrowRight" alt=""></div>-->
+      <Arrow-Right/>
     </div>
     <div class="comment-tags">
       <div v-for="(item, index) in rateInfo.rateTags" :key="index">
@@ -55,11 +56,14 @@ export default {
     handleClick () {
     //  console.log('handleClick')
     //  console.log(this.$route)
-      this.$router.push({
+      /* this.$router.push({
         path: '/rate/list',
         query: {
           itemId: this.$route.query.id
         }
+      }) */
+      this.$router.push({
+        path: `/rate/list/${this.$route.params.id}`
       })
     }
   }
@@ -69,7 +73,7 @@ export default {
 <style scoped lang="stylus">
   .comment
     padding 10px 10px 0
-    border-bottom 10px solid rgba(214,214,214,0.361)
+    border-bottom 10px solid #f6f6f6
     &-top
       display flex
       justify-content space-between
@@ -120,9 +124,9 @@ export default {
       border-top 1px #ddd dotted
       padding-top 10px
       line-height 20px
-  .arrow-right
+/*  .arrow-right
     img
       width 16px
       height 16px
-      vertical-align middle
+      vertical-align middle*/
 </style>

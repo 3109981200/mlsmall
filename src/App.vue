@@ -26,7 +26,7 @@ export default {
   watch: {
     // 详情页不显示公共导航  通过监听路由实现
     $route (e) {
-      if (e.path === '/details' || e.path === '/rate/list' || e.path === '/cart/cartList') {
+      if (e.path === '/details' || e.path === '/rate/list') {
         this.showTab = true
       } else {
         this.showTab = false

@@ -56,7 +56,7 @@ export default {
 <style scoped lang="stylus">
   .goodsInfo
     padding 10px
-    border-bottom 10px solid rgba(214,214,214,0.361)
+    border-bottom 10px solid #f6f6f6
     .price
       display flex
       padding-bottom 10px
