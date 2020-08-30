@@ -12,8 +12,7 @@ export default {
   name: 'ShopCart',
   data () {
     return {
-      scrollProbeType: 3,
-      scrollClick: true
+
     }
   },
   components: {

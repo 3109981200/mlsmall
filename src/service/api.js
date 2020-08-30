@@ -7,10 +7,10 @@ const BASE_URL = config.BASE_URL
  * home
  */
 export function getHomeMultidata () {
-  return axios.get(`${BASE_URL}/home.json`)
+  return axios.get(`${BASE_URL}/home/home.json`)
 }
 export function getGoods () {
-  return axios.get(`${BASE_URL}/goods.json`)
+  return axios.get(`${BASE_URL}/home/goods.json`)
 }
 /*
 api 请求数据
@@ -27,25 +27,40 @@ export default getGoods (type, page){
  * details
  */
 export function getGoodsDetails () {
-  return axios.get(`${BASE_URL}/goods_details.json`)
+  return axios.get(`${BASE_URL}/detail/goods_details.json`)
 }
 export function getGoodsRecommends () {
-  return axios.get(`${BASE_URL}/goods_recommend.json`)
+  return axios.get(`${BASE_URL}/detail/goods_recommend.json`)
 }
 /**
  ratelist
  * */
 export function getRateList () {
-  return axios.get(`${BASE_URL}/goods_rate.json`)
+  return axios.get(`${BASE_URL}/rate/goods_rate.json`)
 }
 
 /**
  * profile
  * */
 export function profileData () {
-  return axios.get(`${BASE_URL}/profile.json`)
+  return axios.get(`${BASE_URL}/profile/profile.json`)
 }
 
+/**
+ * category
+ * */
+export function getCategory () {
+  return axios.get(`${BASE_URL}/category/category.json`)
+}
+export function hotSearchKey () {
+  return axios.get(`${BASE_URL}/category/hot_search.json`)
+}
+export function searchResult () {
+  return axios.get(`${BASE_URL}/category/category_data.json`)
+}
+export function categoryGoods () {
+  return axios.get(`${BASE_URL}/category/category_rec.json`)
+}
 // 商品类
 export class Goods {
   constructor (itemInfo, priceInfo, itemServices) {

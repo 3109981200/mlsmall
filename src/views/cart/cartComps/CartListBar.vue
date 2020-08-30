@@ -84,7 +84,7 @@ export default {
     font-size 16px
     justify-content space-between
     position fixed
-    bottom 50px
+    bottom 49px
     left 0
     right 0
     padding 0 16px

@@ -14,6 +14,7 @@ const Shop = () => import('views/shop/Shop')
 const Customer = () => import('views/customer/Customer')
 const Collect = () => import('views/collect/Collect')
 const Rate = () => import('views/rate/RateList')
+const Search = () => import('views/category/categoryComps/HotSearch')
 // 创建路有对象
 const routes = [
   {
@@ -81,6 +82,14 @@ const routes = [
     component: Rate,
     meta: {
       title: '评论页'
+    }
+  },
+  {
+    path: '/search',
+    component: Search,
+    name: 'Search',
+    meta: {
+      title: '热门搜索'
     }
   }
 ]
