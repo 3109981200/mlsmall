@@ -36,5 +36,6 @@ module.exports = {
         secure: false // 使用的是http协议则设置为false，https协议则设置为true
       }
     }
-  }
+  },
+  publicPath: '/demo/web-shop' // 打包部署到服务器子目录需要
 }

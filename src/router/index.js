@@ -96,7 +96,8 @@ const routes = [
 
 const router = new VueRouter({
   routes,
-  mode: 'history'
+  mode: 'history',
+  base: '/demo/web-shop' // 打包部署到服务器子目录需要
 })
 
 // 路有导航设置页面title

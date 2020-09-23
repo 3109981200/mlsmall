@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import tabBarIndex from 'components/content/tabbarindex/TabBarIndex'
+import tabBarIndex from 'components/content/tabbarindex/TabBarIndex';
 
 export default {
   name: 'App',
